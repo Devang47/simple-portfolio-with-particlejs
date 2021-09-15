@@ -5,7 +5,6 @@ const Content = React.lazy(() => import("./Components/Content"));
 const MovingParticles = React.lazy(
   () => import("./Components/MovingParticles")
 );
-// import Content from "./Components/Content";
 
 function App() {
   return (
