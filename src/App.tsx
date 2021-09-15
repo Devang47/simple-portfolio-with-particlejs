@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
+        <MovingParticles />
         <Content />
         <Loading />
-        <MovingParticles />
       </Suspense>
     </>
   );

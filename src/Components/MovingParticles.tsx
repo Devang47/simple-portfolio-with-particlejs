@@ -2,13 +2,14 @@ import React from "react";
 import Particles from "react-particles-js";
 
 function MovingParticles() {
+
   return (
     <Particles
       className="particle_canvas"
       params={{
         particles: {
           number: {
-            value: 160,
+            value: 250,
             density: {
               enable: false,
             },
@@ -27,7 +28,7 @@ function MovingParticles() {
           move: {
             random: true,
             speed: 1,
-            direction: "top",
+            direction: undefined,
             out_mode: "out",
           },
         },
@@ -45,9 +46,9 @@ function MovingParticles() {
           modes: {
             bubble: {
               distance: 250,
-              duration: 2,
-              size: 0,
-              opacity: 0,
+              duration: 4,
+              size: 4,
+              opacity: .5,
             },
             repulse: {
               distance: 400,
