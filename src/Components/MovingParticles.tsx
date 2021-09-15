@@ -24,6 +24,7 @@ function MovingParticles() {
     <Particles
       className="particle_canvas"
       params={{
+        fpsLimit: 30,
         particles: {
           color: {
             value: particleColor,
