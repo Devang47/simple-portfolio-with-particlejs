@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import anime from "animejs";
 
 function Content() {
   const fullCard = useRef(null);
@@ -13,40 +13,48 @@ function Content() {
   const card2 = useRef(null);
 
   useEffect(() => {
-    const timeline = gsap.timeline({ ease: "sine.out" });
-    timeline
-      .from(fullCard.current, {
-        delay: 4,
-        translateY: -50,
-        duration: 0.4,
-        opacity: 0,
+    anime
+      .timeline({
+        easing: "easeInOutSine",
       })
-      .from(socialIcons.current, {
-        translateY: -20,
-        opacity: 0,
-        duration: 0.5,
+      .add({
+        targets: fullCard.current,
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        delay: 2750,
+        duration: 400,
       })
-      .from(heading.current, {
-        translateY: -20,
-        opacity: 0,
-        duration: 0.4,
+      .add({
+        targets: socialIcons.current,
+        opacity: [0, 1],
+        duration: 600,
       })
-      .from(dividerLine.current, {
-        width: 0,
-        duration: 0.5,
+      .add({
+        targets: heading.current,
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        duration: 600,
       })
-      .from(paragraph.current, {
-        opacity: 0,
-        translateY: 40,
-        duration: 0.4,
-        ease: "none",
+      .add(
+        {
+          targets: dividerLine.current,
+          width: [0, 85],
+          duration: 700,
+        },
+        "-=400"
+      )
+      .add({
+        targets: paragraph.current,
+        translateY: [40, 0],
+        opacity: [0, 1],
+        duration: 600,
       })
-      .from([card1.current, card2.current], {
-        opacity: 0,
-        translateY: 40,
-        duration: 0.4,
-        stagger: 0.1,
-        ease: "none",
+      .add({
+        targets: [card1.current, card2.current],
+        translateY: [40, 0],
+        opacity: [0, 1],
+        duration: 600,
+        delay: anime.stagger(100),
       });
   });
 
@@ -63,7 +71,7 @@ function Content() {
           <FaTwitter />
         </a>
         <a
-          href="https://github.com/Devang47"
+          href="https://github.com/Devang47/simple-portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="github_logo"
