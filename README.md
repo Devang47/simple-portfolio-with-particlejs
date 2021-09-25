@@ -3,8 +3,8 @@
 Hi everyone, my name is Devang Saklani. I'm a Front-end Developer from India and I've recently built a *Simple portfolio website*  using React and GSAP.
 Everyone can use this website and modify it in which ever way they want (no attributions necessary).
 
-Check it out live here: [here](https://devang47.github.io/simple-portfolio-with-particlejs/)
-Github repo: [here](https://devang47.github.io/simple-portfolio-with-particlejs/)
+Check it out live here: [here](https://simple-portfolio-with-particlejs.pages.dev/)
+Github repo: [here](https://github.com/Devang47/simple-portfolio-with-particlejs/)
 
 
 Lighthouse score:
